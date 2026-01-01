@@ -1,16 +1,14 @@
-const { createServer } = require('node:http');
+const express = require('express');
+const app = express();
 
-// const hostname = '0.0.0.0';
-const hostname = '127.0.0.1';
-// const port = process.env.PORT || 3000; -> run port from .env in the future
-const port = 3000;
+app.use(express.json());
 
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+app.get('/status', (req, res) => {
+  res.json({
+    status: 'Running',
+    timestamp: new Date().toISOString()
+  });
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

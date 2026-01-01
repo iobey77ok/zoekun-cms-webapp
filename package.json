@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon backend/app.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,12 @@
   "homepage": "https://github.com/iobey77ok/zoekun-cms-webapp#readme",
   "dependencies": {
     "ajv": "^8.17.1",
+    "body-parser": "^2.2.1",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.1",
+    "nodemon": "^3.1.11",
     "sequelize": "^6.37.7",
     "sqlite3": "^5.1.7"
   }
