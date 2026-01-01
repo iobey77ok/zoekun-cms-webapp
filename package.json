@@ -1,0 +1,24 @@
+{
+  "name": "zoekun-cms-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iobey77ok/zoekun-cms-webapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/iobey77ok/zoekun-cms-webapp/issues"
+  },
+  "homepage": "https://github.com/iobey77ok/zoekun-cms-webapp#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
