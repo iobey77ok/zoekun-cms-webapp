@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const express = require('express');
 const mongoose = require("mongoose");
+const artStyleRouter = require('./routes/art.style.routes');
 
 mongoose.set("strictQuery", false);
 
@@ -25,7 +26,8 @@ app.listen(PORT, () => {
 API endpoints
 */
 
-// Check status
+// TODO: delete this later
+// * Check status
 app.get('/status', (req, res) => {
   res.json({
     status: 'Running',
@@ -33,8 +35,5 @@ app.get('/status', (req, res) => {
   });
 });
 
-// Hello World test
-app.get("/", (req, res) => {
-  console.log(">>> HIT / ROUTE <<<");
-  res.send("Hello World!");
-});
+// Hello World test (use routes instead)
+app.use('/api/artstyle', artStyleRouter);
