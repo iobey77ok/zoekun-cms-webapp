@@ -1,9 +1,8 @@
 const express = require("express");
+const { test } = require("../controllers/art.style.controller");
+
 const router = express.Router();
 
-router.get("/test", (req, res) => {
-    console.log(">>> HIT / ROUTE <<<");
-    res.send("Hello World!");
-});
+router.get("/test", test);
 
 module.exports = router;
